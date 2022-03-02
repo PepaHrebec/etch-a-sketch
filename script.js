@@ -31,10 +31,7 @@ slider.addEventListener("change", () => {
 ///////////////////////functions//////////////////////////
 
 function randColor() {
-    let color="";
-    for(let i=1;i<=3;i++){
-        color=color+(Math.floor(Math.random()*256)).toString(16);
-    }
+    let color=Math.floor(Math.random()*16777215).toString(16);;
     return color;
 }
 
@@ -48,7 +45,6 @@ function loadGrid(input) {
                 if(rainbVal===0){
                     gridBox.style.backgroundColor="black";
                 } else {
-                    console.log(randColor());
                     gridBox.style.backgroundColor=`#${randColor()}`;
                 }
             });
