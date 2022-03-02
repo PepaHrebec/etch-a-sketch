@@ -7,7 +7,13 @@ const rainbowBtn = document.querySelector("#rainbow");
 let rainbVal=0;
 
 resetBtn.addEventListener("click", () => {
+    resetBtn.style.border="inset 4px #ed6e4a";
+    resetBtn.style.backgroundColor="#ed6e4a"
     resetGrid();
+    setTimeout(() => {
+        resetBtn.style.border="outset 4px #ec9076";
+        resetBtn.style.backgroundColor="#ec9076";
+    },90);
 });
 
 rainbowBtn.addEventListener("click", () => {

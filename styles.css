@@ -37,6 +37,7 @@ body {
     border: outset 4px #ec9076;
     color: white;
     background-color: #ec9076;
+    transition-duration: 0.5s;
 }
 
 #buttons > *:hover {
