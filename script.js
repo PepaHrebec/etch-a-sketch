@@ -1,9 +1,17 @@
 const gridCont = document.querySelector("#gridCont");
-const reset = document.querySelector("#reset")
+const resetBtn = document.querySelector("#reset");
+const slider = document.querySelector(".slider");
+const sliderVal = document.querySelector("#sliderVal");
 
-reset.addEventListener("click", () => {
+resetBtn.addEventListener("click", () => {
     resetGrid();
 });
+
+slider.addEventListener("change", () => {
+    resize();
+    loadGrid(slider.value);
+    sliderVal.textContent=`${slider.value}`;
+})
 
 ///////////////////////functions//////////////////////////
 
@@ -18,6 +26,12 @@ function loadGrid(input) {
             });
             gridRow.appendChild(gridBox).className="gridBox";
         }
+    }
+}
+
+function resize() {
+    while(gridCont.firstChild){
+        gridCont.firstChild.remove();
     }
 }
 

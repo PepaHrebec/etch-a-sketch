@@ -1,14 +1,23 @@
-.gridBox {
-    aspect-ratio: 1/1;
-    flex: 1;
+#board {
+    display: flex;
+    justify-content: center;
 }
 
 #gridCont {
-    width: 256px;
-    height: 256px;
+    width: 384px;
+    height: 384px;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+}
+
+#sizing {
+    display: flex;
+}
+
+.gridBox {
+    aspect-ratio: 1/1;
+    flex: 1;
 }
 
 .gridRow {
